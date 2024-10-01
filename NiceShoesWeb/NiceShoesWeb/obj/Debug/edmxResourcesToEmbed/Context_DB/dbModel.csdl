@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLNiceShoesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ChiTietDH">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdSP" Type="Int32" />
+    <Property Name="AnhSP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MoTaSP" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SoLuong" Type="Int32" />
+  </EntityType>
+  <EntityType Name="DangKi_DangNhapKH">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdKH" Type="Int32" />
+    <Property Name="TenKH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MatKhau" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="DangNhapNQT">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdNQT" Type="Int32" />
+    <Property Name="EmailNQT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MatKhauNQT" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="DatHang">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdKH" Type="Int32" />
+    <Property Name="TenKH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TenSP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TrangThaiDH" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="SanPham">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdSP" Type="Int32" />
+    <Property Name="TenSP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AnhSP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="GiaSP" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="IdThuongHieu" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ThuongHieu">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdThuongHieu" Type="Int32" />
+    <Property Name="TenThuongHieu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="QLNiceShoes_Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ChiTietDHs" EntityType="Self.ChiTietDH" />
+    <EntitySet Name="DangKi_DangNhapKH" EntityType="Self.DangKi_DangNhapKH" />
+    <EntitySet Name="DangNhapNQTs" EntityType="Self.DangNhapNQT" />
+    <EntitySet Name="DatHangs" EntityType="Self.DatHang" />
+    <EntitySet Name="SanPhams" EntityType="Self.SanPham" />
+    <EntitySet Name="ThuongHieux" EntityType="Self.ThuongHieu" />
+  </EntityContainer>
+</Schema>

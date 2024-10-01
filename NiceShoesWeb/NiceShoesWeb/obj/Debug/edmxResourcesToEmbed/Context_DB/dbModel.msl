@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QLNiceShoesModelStoreContainer" CdmEntityContainer="QLNiceShoes_Entities">
+    <EntitySetMapping Name="ChiTietDHs">
+      <EntityTypeMapping TypeName="QLNiceShoesModel.ChiTietDH">
+        <MappingFragment StoreEntitySet="ChiTietDH">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdSP" ColumnName="IdSP" />
+          <ScalarProperty Name="AnhSP" ColumnName="AnhSP" />
+          <ScalarProperty Name="MoTaSP" ColumnName="MoTaSP" />
+          <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DangKi_DangNhapKH">
+      <EntityTypeMapping TypeName="QLNiceShoesModel.DangKi_DangNhapKH">
+        <MappingFragment StoreEntitySet="DangKi_DangNhapKH">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdKH" ColumnName="IdKH" />
+          <ScalarProperty Name="TenKH" ColumnName="TenKH" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DangNhapNQTs">
+      <EntityTypeMapping TypeName="QLNiceShoesModel.DangNhapNQT">
+        <MappingFragment StoreEntitySet="DangNhapNQT">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdNQT" ColumnName="IdNQT" />
+          <ScalarProperty Name="EmailNQT" ColumnName="EmailNQT" />
+          <ScalarProperty Name="MatKhauNQT" ColumnName="MatKhauNQT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DatHangs">
+      <EntityTypeMapping TypeName="QLNiceShoesModel.DatHang">
+        <MappingFragment StoreEntitySet="DatHang">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdKH" ColumnName="IdKH" />
+          <ScalarProperty Name="TenKH" ColumnName="TenKH" />
+          <ScalarProperty Name="TenSP" ColumnName="TenSP" />
+          <ScalarProperty Name="TrangThaiDH" ColumnName="TrangThaiDH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SanPhams">
+      <EntityTypeMapping TypeName="QLNiceShoesModel.SanPham">
+        <MappingFragment StoreEntitySet="SanPham">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdSP" ColumnName="IdSP" />
+          <ScalarProperty Name="TenSP" ColumnName="TenSP" />
+          <ScalarProperty Name="AnhSP" ColumnName="AnhSP" />
+          <ScalarProperty Name="GiaSP" ColumnName="GiaSP" />
+          <ScalarProperty Name="IdThuongHieu" ColumnName="IdThuongHieu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ThuongHieux">
+      <EntityTypeMapping TypeName="QLNiceShoesModel.ThuongHieu">
+        <MappingFragment StoreEntitySet="ThuongHieu">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdThuongHieu" ColumnName="IdThuongHieu" />
+          <ScalarProperty Name="TenThuongHieu" ColumnName="TenThuongHieu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
